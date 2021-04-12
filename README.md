@@ -1,6 +1,8 @@
 # Go-Site
 
-This is a sample website made using Go-Fiber, Gorm, and Postgres. 
+This is a sample website made using Go-Fiber, Gorm, and Postgres.
+Furthermore, it has an example of end-to-end API test 
+`pkg/web_api/server_test.go`.
 The web application auto migrate the following schema on start:
 
 ```postgresql
@@ -34,7 +36,9 @@ create an empty database with the name that corresponds with
 - `internal` has all application internal functionality.
 - `mocks` I used mockery to generate mock for service that may
 be used in future testing.
--  `pkg` contains api server and routes
+-  `pkg` contains api server and routes, also it contains
+   an end-to-end test for the API `server_test.go` it creates
+   a go-site and check if it's created correctly and then delete it.
 - `Makefile` to run shortcut commands, you can use `make run`
 to start the application.
 - `run.sh` to run Postgres containers

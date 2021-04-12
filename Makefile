@@ -5,3 +5,6 @@ start-db:
 
 run:
 	go run ./cmd/site
+
+build:
+	go build -o ./bin/go-site ./cmd/site
