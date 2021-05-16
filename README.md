@@ -22,13 +22,13 @@ ALTER TABLE go_site_attributes ADD CONSTRAINT go_site_attributes_pkey PRIMARY KE
 ALTER TABLE go_site_attributes ADD CONSTRAINT go_site_attributes_site_id_fkey FOREIGN KEY (site_id) REFERENCES go_site(site_id);
 ```
 
-Please make sure before start the application that you 
+Please make sure before starting the application that you 
 have an open and running Postgres database, and the variables
-in `.env` file is correct. If you haven't installed database
-you can run bash file `run.sh` to run 2 containers one for 
-Postgres and the other for pgAdmin4 to manage Postgres then 
-create an empty database with the name that corresponds with
-`.env` file `DB_NAME` variable.
+in `.env` file are reflecting the correct configuration. 
+If you haven't installed database you can run bash file `run.sh` 
+to run 2 containers one for Postgres and the other for pgAdmin4 
+to manage Postgres then create an empty database with the name 
+that corresponds with `.env` file `DB_NAME` variable.
 
 ## Project directory structure:
 
